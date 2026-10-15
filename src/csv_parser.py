@@ -10,13 +10,20 @@ def parse_csv_line(linea):
     """Parsea una línea de CSV separada por comas."""
     if not linea:
         return []
+    f = StringIO(linea)
+    lector = csv.reader(f)
+    return next(lector)
 
-    # Manejar comillas
-    if '"' in linea:
-        # BUG 1: No maneja correctamente comillas anidadas o escapadas
-        return linea.split(',')
 
-    return linea.split(',')
+
+
+
+
+
+
+
+
+
 
 def leer_csv_como_lista(contenido_csv):
     """Lee el contenido de un CSV y retorna una lista de listas."""
