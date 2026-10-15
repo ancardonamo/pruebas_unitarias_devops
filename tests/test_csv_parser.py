@@ -16,7 +16,14 @@ def test_parse_csv_line_con_comillas_internas():
     resultado = parse_csv_line(linea)
     # Assert
     assert len(resultado) == 3
-    assert resultado[1] == '"Perez, Juan"'
+    assert resultado[1] == "Perez, Juan"
+
+
+
+
+
+
+
 
 def test_csv_a_diccionarios_filas_incompletas():
     # Arrange
